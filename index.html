@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <div class="container">
       <header>
         <nav id="menunav">
@@ -260,7 +263,42 @@
         </div>
       </div>
     </div>
+    <div class="action-btn">
+      <div class="action-h-p" data-aos="zoom-in" data-aos-duration="1500">
+        <h1>Call To Action</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          architecto omnis minima necessitatibus harum! Numquam.
+        </p>
+        <button><a href="">Call To Action</a></button>
+      </div>
+    </div>
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
 
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 10 ||
+          document.documentElement.scrollTop > 10
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
